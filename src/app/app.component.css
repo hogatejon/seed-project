@@ -4,3 +4,8 @@ p {
   margin: 1em;
   background-color: white;
 }
+
+.not-registered {
+  font-weight: bold;
+  color: red;
+}

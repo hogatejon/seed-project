@@ -8,7 +8,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent implements OnInit{
 
-  loginStatus: boolean = false;
+  loggedIn: boolean = false;
 
   user = {
     registered: true,
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
   }
 
   outputLoginStatus(event: boolean): void {
-    this.loginStatus = event
+    this.loggedIn = event
     console.log('the app component heard the event')
   }
 
