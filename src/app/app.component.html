@@ -1,5 +1,17 @@
 <div>
   <app-header [user]="user"></app-header>
+  <app-login></app-login>
+  <!-- <p>This text is <span [ngStyle]='setImportance()'>very</span> important</p>
+  <input type="radio" name="preference" id="importantHighlight"
+         style="transform: scale(1.5)"
+         (click)="setStylePreference('hilite')">
+  <label for="importantHighlight">Highlight</label>
+
+  <input type="radio" name="preference" id="importantHCaps"
+         style="transform: scale(1.5)"
+         (click)="setStylePreference('caps')">
+  <label for="importantHCaps">Caps</label> -->
+
   <!-- <section *ngIf="!user.registered">
     <img src="../assets/images/chooseMyPlate.gov.png" alt="choose my plate image">
   </section>
@@ -8,13 +20,13 @@
     <img src="../assets/images/generic-plate.png" alt="choose my plate image">
   </section> -->
 
-  <div [ngSwitch]="loggedIn">
+  <!-- <div [ngSwitch]="loggedIn">
     <p>Logged in:
       <span *ngSwitchCase="true">{{ loggedIn }}</span>
       <span *ngSwitchCase="false" class="not-registered">{{ loggedIn }}</span>
       <span *ngSwitchDefault>Default case if loggedIn is not true or false</span>
     </p>
-  </div>
+  </div> -->
 
   <app-child (login)="outputLoginStatus($event)"></app-child>
  </div>

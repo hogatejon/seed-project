@@ -9,6 +9,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 export class AppComponent implements OnInit{
 
   loggedIn: boolean = false;
+  stylePreference: string;
 
   user = {
     registered: true,
@@ -19,8 +20,23 @@ export class AppComponent implements OnInit{
   }
 
   outputLoginStatus(event: boolean): void {
-    this.loggedIn = event
-    console.log('the app component heard the event')
+    this.loggedIn = event;
+  }
+
+  setStylePreference(pref: string): void {
+    this.stylePreference = pref;
+  }
+
+  setImportance() {
+    if (this.stylePreference === 'hilite') {
+      return {
+        'background-color': 'yellow'
+      };
+    } else if (this.stylePreference === 'caps') {
+      return {
+        'text-transform': 'uppercase'
+      }
+    }
   }
 
 }
